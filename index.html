@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <title>Lieferando</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js"></script>
+
+
+</head>
+
+<body onload="loadReceipts()">
+
+    <div class="header">
+
+        <div class="header-left">
+            <span class="material-icons-outlined d-none-mobile">
+                arrow_back_ios
+            </span>
+            <img src="img/logo.png">
+            <span>Lieferando.de</span>
+        </div>
+
+
+
+        <div class="header-middle d-none-mobile">
+            <p>Gollacker 14, Haiger</p>
+
+        </div>
+
+        <div class="header-right">
+            <span onclick="togglePopup()" class="material-icons-outlined">
+                menu
+            </span>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="supplier">
+            <img class="bg-image" src="img/pizza.jpg">
+            <div class="main-top">
+                <div class="supplier-headline">
+                    <h1>Semis Pizza und Lieferservice</h1>
+                    <img class="rating" src="img/bewertung.png">
+                </div>
+                <img src="img/icons.png">
+            </div>
+            <div class="main-top">Bei diesem Restaurant kannst Du Stempel sammeln. Stelle beim Bestellabschluss bitte
+                sicher, dass Du <br>
+                Dich für unseren Newsletter angemeldet hast, um Deine Stempel per E-Mail zu erhalten.
+            </div>
+
+            <div class="supplier-menu-bg">
+                <nav class="supplier-menu">
+                    <a href="#">Beliebte Gerichte</a>
+                    <a href="#">Salata</a>
+                    <a href="#">Pizza</a>
+                    <a href="#">Party Pizza</a>
+                    <a href="#">Calzone</a>
+                    <a href="#">Pasta</a>
+                    <a href="#">Beef</a>
+                    <a href="#">Alkoholfreie Getränke</a>
+                    <a href="#">Alkoholische Getränke</a>
+                </nav>
+            </div>
+
+            <div class="foods">
+                <div class="foods-headline">
+                    Beliebte Gerichte
+                </div>
+                <div id="foods-details">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="basket-container d-none-mobile" id="basket-mobile">
+            <div class="mobile-basket">
+                <div class="margin-class"><b>Warenkorb</b></div>
+                <h4 onclick="exitBasket()" class="onlymobile" id="exit">X</h4>
+            </div>
+            <div class="margin-class" id="cart"></div>
+            <div class="margin-class" id="empty-cart">
+                <span class="material-icons-outlined">
+                    shopping_bag
+                </span>
+                <p>Wähle leckere Gerichte aus der Karte und bestelle dein Menü</p>
+            </div>
+
+            <div id="cart-sum" class="cart-sum d-none margin-class">
+                <div> <span><b>Gesamt</b></span> </div>
+                <div> <span><b id="total-sum"></b></span><b>€</b></div>
+            </div>
+
+            <div class="margin-class" id="minimum-order">
+                Leider kannst Du noch nicht bestellen. Semis Pizza und Lieferservice liefert erst ab einem
+                Mindestbestellwert von 20,00 € (exkl. Lieferkosten).
+            </div>
+
+            <button onclick="togglePopup()" class="d-none" id="order-button">Bestellen</button>
+
+        </div>
+
+    </div>
+
+    <div class="atc-mobile1 onlymobile">
+        <button class="atc-mobile2" onclick="openBasket()">Zum Warenkorb</button>
+    </div>
+
+    <div class="footer-row">
+        <div class="footer-container">
+            © 2021 JulianStahl
+        </div>
+
+        <div class="footer-container">
+            <a href="#">AGB</a> |
+            <a href="#">Datenschutz</a> |
+            <a href="#">Impressum</a>
+        </div>
+    </div>
+
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>Das ist leider nur eine Testseite.
+                Wenn du wirklich etwas bestellen willst dann schaue
+                <a href="https://www.lieferando.de/speisekarte/semis-pizza-lieferservice">hier</a> nach
+            </h1>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
